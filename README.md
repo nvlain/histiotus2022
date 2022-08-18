@@ -48,7 +48,7 @@ The D-values were called with the R-script estAvgError provided by ANGSD.
 
 8. Nuclear phylogenetic tree
 A neighbor-joining tree was constructed with the BioNJ tree building algorithm of FastME v.2.1.5 (Lefort et al. 2015), based on individual pairwise genetic distances estimated with ngsDist v.1.0.9: ngsDist --posH all_beagle_pos.txt --geno genolike_all.beagle.gz --probs --n_ind 58 --n_sites 9943522 --n_boot_rep 100 --n_threads 10 --out all_dist_boot100  
-FastME http://www.atgc-montpellier.fr/fastme/ with BioNJ  
+FastME http://www.atgc-montpellier.fr/fastme/ with BioNJ, input provided from previous step.  
 Support values with RAxML-NG v. 1.0.2: raxml-ng --support --tree all_dist_boot100.main.nwk --bs-trees all_dist.boots100.nwk --prefix all_dist_boot100
 
 9. Mitochondrial DNA assembly per species
@@ -61,7 +61,7 @@ Assembled mitochondria and E. fuscus 215 mitochondria from NCBI (MF143474.1) wer
 
 The Clustal alignment file was separated into 13 protein-coding mitochondrial gene and 2 rRNA alignments based on the E. fuscus mitochondrial annotation and combined in one Nexus file with help of Geneious 11.03. Overlaps were also removed between ATP8 and ATP6, ND4L and ND4, ND5 and ND6 to include the overlapping region only once.
 
-A consensus tree was built with IQ-TREE v. 2.1.4_beta: iqtree -T AUTO -s All_bygene_clustalo_TRIM_rRNAs.nex -p charset_TRIM_rRNAs.nex -bb 1000 -m MFP+MERGE -pre all_mtgenes_part_TRIM_rRNAs_iqtree
+A consensus tree was built with IQ-TREE v. 2.1.4_beta, input provided: iqtree -T AUTO -s All_bygene_clustalo_TRIM_rRNAs.nex -p charset_TRIM_rRNAs.nex -bb 1000 -m MFP+MERGE -pre all_mtgenes_part_TRIM_rRNAs_iqtree
 
 11. Mitochondrial molecular timing
 BEAST2 v. 2.6.6. for molecular dating and BEAUti 2 to produce the run file for BEAST2. BEAST2 was ran three times with chain length 50 000 000 and the trees were combined with LogCombiner with 10% burnins and TreeAnnotator was used for consensus tree. Input file (all_bygenes_partition_50m_inputREVISION.xml) is provided. 

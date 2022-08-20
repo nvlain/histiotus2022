@@ -18,7 +18,7 @@ Program used PCAngsd: pcangsd.py -beagle pruned_final.beagle.gz -out PCA
 
 5. Admixture
 Program used NgsAdmix v.32:  
-for k in `seq 1 3`; do for eachK in `seq 1 10`;  
+for k in 'seq 1 3'; do for eachK in 'seq 1 10';  
 do  
 NGSadmix -likes pruned_final.beagle.gz -K "$k" -P 8 -o admix_"$k"_"$eachK" -minMaf 0.05  
 done; done  

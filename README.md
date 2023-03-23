@@ -1,8 +1,8 @@
 # Whole genome analysis of Histiotus bats
-These are the programs, commands and files used in the paper "Whole-genome analysis reveals contrasting relationships among nuclear and mitochondrial genomes between three sympatric bat species" by Laine et al.
+These are the programs, commands and files used in the paper "Whole-genome analysis reveals contrasting relationships among nuclear and mitochondrial genomes between three sympatric bat species" by Laine et al 2023 https://doi.org/10.1093/gbe/evac175
 
 Sequence data can be found in Genbank under Bioproject PRJNA827658.  
-Assembled mitochondria are in Genbank under accession number X.
+Assembled mitochondria are in Genbank under accession number OP328298-OP328300 and OP345288-OP345340.
 
 1. Read mapping 
 
